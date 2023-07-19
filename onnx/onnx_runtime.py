@@ -12,7 +12,7 @@ opt_session.enable_cpu_mem_arena = False
 opt_session.graph_optimization_level = onnxruntime.GraphOptimizationLevel.ORT_DISABLE_ALL
 
 model_path = 'best.onnx'
-EP_list = ['CUDAExecutionProvider', 'CPUExecutionProvider']
+EP_list = ['TensorrtExecutionProvider', 'CUDAExecutionProvider', 'CPUExecutionProvider']
 
 ort_session = onnxruntime.InferenceSession(model_path, providers=EP_list)
 
