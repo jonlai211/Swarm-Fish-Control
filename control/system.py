@@ -18,22 +18,17 @@ class PumpSystem:
         #                       0x99, 0x19]
 
     # poor algorithm
-    def update_data_transmit(self, layer, index, state):
-        byte_index = 2 + (layer + 1) * 4 - (index + 1) // 8 - 1
-        bit_index = (index + 1) % 8
+    def update_data_transmit(self, board_layer, board_index, state):
+        byte_index = 2 + (board_layer + 1) * 4 - (board_index // 8 + 1)
+        bit_index = board_index % 8 + 1
         bit_num = bin(self.data_transmit[byte_index])[2:].zfill(8)
         bit_num_new = bit_num[:-bit_index] + str(state) + bit_num[len(bit_num) - bit_index + 1:]
         self.data_transmit[byte_index] = int(bit_num_new, 2)
 
     def pos_transfer(self, x, y, state):
         index = (x - 1) * 10 + y
-        if (index % 25 == 0):
-            board_index = 24
-            board_layer = index // 25 - 1
-        else:
-            board_index = index % 25 - 1
-            board_layer = index // 25
-
+        board_index = (index - 1) % 25
+        board_layer = (index - 1) // 25
         self.update_data_transmit(board_layer, board_index, state)
 
     def motor_status_show(self):
@@ -64,15 +59,14 @@ if __name__ == "__main__":
     pump = PumpSystem()
 
     # test
-    # pump.pos_transfer(3, 3, 1)
-    pump.pos_transfer(3, 4, 1)
-
-    pump.motor_status_show()
-    pump.pump_status_show()
-
-    # while True:
-    #     x, y, state = handle_command()
-    #     pump.pos_transfer(x, y, state)
+    # pump.pos_transfer(8, 4, 1)
     #
-    #     pump.motor_status_show()
-    #     pump.pump_status_show()
+    # pump.motor_status_show()
+    # pump.pump_status_show()
+
+    while True:
+        x, y, state = handle_command()
+        pump.pos_transfer(x, y, state)
+
+        pump.motor_status_show()
+        pump.pump_status_show()
