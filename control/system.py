@@ -55,18 +55,18 @@ class PumpSystem:
             print(" ".join(str(element) for element in row))
 
 
-if __name__ == "__main__":
-    pump = PumpSystem()
-
-    # test
-    # pump.pos_transfer(8, 4, 1)
-    #
-    # pump.motor_status_show()
-    # pump.pump_status_show()
-
-    while True:
-        x, y, state = handle_command()
-        pump.pos_transfer(x, y, state)
-
-        pump.motor_status_show()
-        pump.pump_status_show()
+# if __name__ == "__main__":
+#     pump = PumpSystem()
+#
+#     # unit test
+#     # pump.pos_transfer(8, 4, 1)
+#     #
+#     # pump.motor_status_show()
+#     # pump.pump_status_show()
+#
+#     while True:
+#         x, y, state = handle_command()
+#         pump.pos_transfer(x, y, state)
+#
+#         pump.motor_status_show()
+#         pump.pump_status_show()

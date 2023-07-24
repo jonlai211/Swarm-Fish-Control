@@ -6,6 +6,7 @@
 import socket
 import struct
 from system import PumpSystem
+from command import handle_command
 
 
 class TCPClient:
@@ -33,7 +34,10 @@ if __name__ == "__main__":
     client = TCPClient("localhost", 8000)
     pump = PumpSystem()
 
-    # test: open pump 3, 3; board 1, 23
-    pump.pos_transfer(3, 3, 1)
+    while True:
+        x, y, state = handle_command()
+        pump.pos_transfer(x, y, state)
 
-    client.send_message(pump.data_transmit)
+        pump.motor_status_show()
+        pump.pump_status_show()
+        client.send_message(pump.data_transmit)
