@@ -5,6 +5,7 @@
 
 import socket
 import struct
+import time
 from system import PumpSystem
 from command import handle_command
 
@@ -34,10 +35,27 @@ if __name__ == "__main__":
     client = TCPClient("localhost", 8000)
     pump = PumpSystem()
 
-    while True:
-        x, y, state = handle_command()
-        pump.pos_transfer(x, y, state)
+    # test all pump
+    for x in range(1, 11):
+        for y in range(1, 11):
+            pump.pos_transfer(x, y, 1)
+            pump.motor_status_show()
+            pump.pump_status_show()
+            client.send_message(pump.data_transmit)
 
-        pump.motor_status_show()
-        pump.pump_status_show()
-        client.send_message(pump.data_transmit)
+            time.sleep(0.5)
+
+            pump.pos_transfer(x, y, 0)
+            pump.motor_status_show()
+            pump.pump_status_show()
+            client.send_message(pump.data_transmit)
+
+            time.sleep(1)
+
+    # while True:
+    #     x, y, state = handle_command()
+    #     pump.pos_transfer(x, y, state)
+    #
+    #     pump.motor_status_show()
+    #     pump.pump_status_show()
+    #     client.send_message(pump.data_transmit)
