@@ -88,16 +88,16 @@ networkx==3.1
 notebook==7.0.0
 notebook_shim==0.2.3
 numpy==1.24.4
-nvidia-cublas-cu11==2022.4.8
-nvidia-cublas-cu117==11.10.1.25
-nvidia-cublas-cu12==12.2.1.16
-nvidia-cuda-runtime-cu11==2022.4.25
-nvidia-cuda-runtime-cu117==11.7.60
-nvidia-cuda-runtime-cu12==12.2.53
-nvidia-cudnn-cu11==2022.5.19
-nvidia-cudnn-cu116==8.4.0.27
-nvidia-cudnn-cu12==8.9.2.26
-nvidia-tensorrt==8.4.3.1
+# nvidia-cublas-cu11==2022.4.8
+# nvidia-cublas-cu117==11.10.1.25
+# nvidia-cublas-cu12==12.2.1.16
+# nvidia-cuda-runtime-cu11==2022.4.25
+# nvidia-cuda-runtime-cu117==11.7.60
+# nvidia-cuda-runtime-cu12==12.2.53
+# nvidia-cudnn-cu11==2022.5.19
+# nvidia-cudnn-cu116==8.4.0.27
+# nvidia-cudnn-cu12==8.9.2.26
+# nvidia-tensorrt==8.4.3.1
 oauthlib==3.2.2
 onnx==1.14.0
 onnx-graphsurgeon==0.3.27
