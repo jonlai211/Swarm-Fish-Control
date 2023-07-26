@@ -100,7 +100,7 @@ numpy==1.24.4
 # nvidia-tensorrt==8.4.3.1
 oauthlib==3.2.2
 onnx==1.14.0
-onnx-graphsurgeon==0.3.27
+# onnx-graphsurgeon==0.3.27
 onnxconverter-common==1.13.0
 onnxruntime==1.8.1
 onnxruntime-gpu==1.15.1
@@ -128,7 +128,7 @@ pycparser==2.21
 pycuda==2022.2.2
 Pygments==2.15.1
 pyparsing==3.0.9
-pyproject-toml==0.0.11
+# pyproject-toml==0.0.11
 pyserial==3.5
 pytest==7.4.0
 python-dateutil==2.8.2
@@ -172,8 +172,8 @@ tifffile==2023.7.10
 tinycss2==1.2.1
 toml==0.10.2
 tomli==2.0.1
-torch==1.10.2+cu113
-torchvision==0.11.3+cu113
+# torch==1.10.2+cu113
+# torchvision==0.11.3+cu113
 tornado==6.3.2
 traitlets==5.9.0
 typing_extensions==4.7.1
