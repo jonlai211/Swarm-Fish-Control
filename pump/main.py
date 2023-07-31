@@ -29,6 +29,7 @@ def run_client():
 
 
 if __name__ == "__main__":
+    # TODO: Fix threading construction problems
     server_thread = threading.Thread(target=run_server)
     client_thread = threading.Thread(target=run_client)
 

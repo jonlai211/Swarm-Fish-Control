@@ -10,6 +10,7 @@ def handle_command():
     if command == "exit":
         exit()
     elif command == "help":
+        # TODO: Add instructions here
         pass
     elif command_parts[0] == "pump":
         x = int(command_parts[1])
@@ -18,3 +19,4 @@ def handle_command():
         if (command_parts[3] == "on") or (command_parts[3] == "1"):
             state = 1
         return x, y, state
+    # TODO: Add new function for opening and closing all pumps
