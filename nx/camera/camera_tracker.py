@@ -5,6 +5,7 @@
 
 import cv2
 import time
+import torch
 from ultralytics import YOLO
 
 
@@ -23,8 +24,12 @@ def calculate_fps(frame_count, start_time):
 
 
 def main():
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+    print(device)
+
     cap = cv2.VideoCapture(4)
-    model = YOLO("../models/yolov8n.pt")
+    model = YOLO("../models/yolov8n.pt", device)
 
     boxes = []
     ids = None
