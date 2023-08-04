@@ -14,7 +14,7 @@
 
 1. 刷写完成后，执行以下命令安装必要的 TensorRT 库： `sudo apt install python3-libnvinfer*`.
 
-2. 然而，在虚拟环境内使用 `import tensorrt 仍未解决`.
+2. 然而，在虚拟环境内使用 `import tensorrt 仍未解决`. [如何在 Jetson NX 上的 Python 中导入 TensorRT](https://forums.developer.nvidia.com/t/how-to-import-tensorrt-in-python-on-jetson-nx/261353).
 
 
 
@@ -22,17 +22,20 @@
 
 1. 从这个论坛主题中下载与 Jetson NX 兼容的适当版本的 PyTorch 和 TorchVision.
 
-2. 对于 TorchVision，在使用前请按照提供的说明进行构建。 [如何在 Jetson NX 上的 Python 中导入 TensorRT](https://forums.developer.nvidia.com/t/how-to-import-tensorrt-in-python-on-jetson-nx/261353).
+2. 对于 TorchVision，在使用前请按照提供的说明进行构建. 你可以在这里找到[PyTorch for Jetson](https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048).
+
 
 
 ## 配置 GitHub SSH：
 
-1. 按照官方 GitHub 指南设置 Jetson NX 设备上的 GitHub SSH。 [通过 SSH 连接到 GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+1. 按照官方 GitHub 指南设置 Jetson NX 设备上的 GitHub SSH. [通过 SSH 连接到 GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+
 
 
 ## 安装 ONNX 库：
 
 1. 请参考这个论坛主题中的帖子和回复，以获取关于安装 ONNX 库的指导. [在 Jetson Xavier 上安装 ONNX 库](https://forums.developer.nvidia.com/t/installing-onnx-library-on-my-jetson-xavier/115229).
+
 
 
 ## 在 Fedora 上安装 TensorRT：

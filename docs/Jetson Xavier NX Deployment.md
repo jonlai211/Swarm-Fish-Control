@@ -14,7 +14,7 @@
 
 1. After flashing, execute the following command to install the necessary TensorRT library: `sudo apt install python3-libnvinfer*`.
 
-2. However, `import tensorrt` within a virtual environment still not be solved yet.
+2. However, `import tensorrt` within a virtual environment still not be solved yet. [How to import tensorrt in python on jetson nx](https://forums.developer.nvidia.com/t/how-to-import-tensorrt-in-python-on-jetson-nx/261353).
 
 
 
@@ -22,7 +22,7 @@
 
 1. Download the appropriate PyTorch and TorchVision versions compatible with Jetson NX from this forum thread.
 
-2. For TorchVision, follow the provided instructions to build it before use. [How to import tensorrt in python on jetson nx](https://forums.developer.nvidia.com/t/how-to-import-tensorrt-in-python-on-jetson-nx/261353).
+2. For TorchVision, follow the provided instructions to build it before use. You can find at here [PyTorch for Jetson](https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048).
 
 
 
