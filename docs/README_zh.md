@@ -12,7 +12,7 @@ Swarm-Fish-Control是一个基于深度学习的项目，旨在通过训练神�
 
 - [x] **使用TensorRT的YOLO推理**: 一套完整的脚本，用于在捕获的图像或视频流上使用YOLO（You Only Look Once）与TensorRT进行实时目标检测。
 
-- [x] **Jetson Xavier NX指南**: 详细说明如何在Jetson Xavier NX上部署项目并解决常见问题。
+- [x] **[Jetson Xavier NX指南](Jetson%20Xavier%20NX%20Deployment_zh.md)**: 详细说明如何在Jetson Xavier NX上部署项目并解决常见问题。
 
 - [ ] **基于鱼群数据的新检测模型训练**: 正在进行的一项发展是利用真实世界的鱼群数据来训练和生成新的识别模型。
 

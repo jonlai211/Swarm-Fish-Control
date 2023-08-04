@@ -13,7 +13,7 @@ The project consists of the following main components:
 
 - [x] **YOLO Inference with TensorRT**: A complete set of scripts for using YOLO (You Only Look Once) with TensorRT to perform real-time object detection on the captured images or video streams.
 
-- [x] **Jetson Xavier NX Guide**: A detailed guide explaining how to deploy the project on Jetson Xavier NX and troubleshoot common errors.
+- [x] **[Jetson Xavier NX Guide](docs/Jetson%20Xavier%20NX%20Deployment.md)**: A detailed guide explaining how to deploy the project on Jetson Xavier NX and troubleshoot common errors.
 
 - [ ] **Fish Data-Driven Training for New Detect Model**: One of the ongoing developments is the utilization of real-world fish swarm data to train and generate new recognition models. 
 
