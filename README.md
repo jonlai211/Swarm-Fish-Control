@@ -2,7 +2,7 @@
 
 ## Description
 
-Swarm-Fish-Control is a deep learning-based project that aims to control the motion of a fish swarm by training a neural network model to control a 10x10 array of air pumps' nozzles, which emit bubbles to influence the fish swarm's behavior. The goal is to achieve precise control over the fish swarm's movements by triggering the corresponding air pump nozzles in response to desired fish swarm behaviors. This project serves as a preparatory step for future research in using swarm control techniques for real-world applications, such as controlling swarms of drones or autonomous boats.
+Swarm-Fish-Control is a deep learning-based project that aims to control the motion of a fish swarm by training a neural network model to control a 10x10 array of air pumps' nozzles, which emit bubbles to influence the fish swarm's behavior. 
 
 The project consists of the following main components:
 
@@ -13,6 +13,44 @@ The project consists of the following main components:
 3. **YOLO Inference with TensorRT**: A complete set of scripts for using YOLO (You Only Look Once) with TensorRT to perform real-time object detection on the captured images or video streams.
 
 4. **Jetson Xavier NX Guide**: A detailed guide explaining how to deploy the project on Jetson Xavier NX and troubleshoot common errors.
+
+This project serves as a preparatory step for future research in using swarm control techniques for real-world applications, such as controlling swarms of drones or autonomous boats.
+
+
+
+## Structure
+```
+Swarm-Fish-Control
+├── nx
+│   ├── camera
+│   │   ├── camera_test.py
+│   │   └── camera_tracker.py
+│   └── models
+│       └── yolov8n.pt
+├── pump
+│   ├── command.py
+│   ├── main.py
+│   ├── system.py
+│   ├── tcp_client.py
+│   └── tcp_server.py
+├── yolo2trt
+│   ├── data
+│   │   ├── bus.jpg
+│   │   └── zidane.jpg
+│   ├── engine_tools
+│   │   ├── __init__.py
+│   │   ├── engine.py
+│   │   ├── torch_utils.py
+│   │   └── utils.py
+│   ├── models
+│   │   └── yolov8n.engine
+│   ├── outputs
+│   │   ├── bus.jpg
+│   │   └── zidane.jph
+│   ├── config.py
+│   └── infer.py
+└── README.md
+```
 
 
 
@@ -59,14 +97,18 @@ Alternatively, you can modify the code in `tcp_client.py` to implement custom lo
     ```
 With these steps, you can now effectively deploy the Swarm-Fish-Control project, enabling real-time control of fish swarm behavior through the air pump array and efficient visual recognition using the Jetson Xavier NX platform.
 
+
+
 ## Tested Platforms:
-- Fedora 38 (Validation details):
+- **Fedora 38**:
     - Host: XPS 15 9500
     - Kernel: 6.4.6-200.fc38.x86_64
     - GPU: NVIDIA GeForce GTX 1650 Ti Mobile
     - CUDA: 11.7
     - TensorRT: 8.6.1
-- Jetson NX (Validation details):
+
+
+- **Jetson Xavier NX**:
     - OS: Ubuntu 20.04.6 LTS aarch64
     - Host: NVIDIA Jetson Xavier NX Developer Kit
     - Kernel: 5.10.104-tegra
@@ -87,4 +129,4 @@ The command-line interface (CLI) has been streamlined to make it more user-frien
 ## Acknowledgements
 
  - [YOLOv8-TensorRT](https://github.com/triple-Mu/YOLOv8-TensorRT)
- - [ultralytics](https://github.com/ultralytics/ultralytics)
+ - [ultralytics](https://github.com/ultralytics/ultralytics)****
