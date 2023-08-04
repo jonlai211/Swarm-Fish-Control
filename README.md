@@ -1,4 +1,5 @@
 # Swarm-Fish-Control
+[中文](docs/README_zh.md)
 
 ## Description
 
@@ -6,17 +7,17 @@ Swarm-Fish-Control is a deep learning-based project that aims to control the mot
 
 The project consists of the following main components:
 
--[x] **Serial Control Code**: A set of code snippets that demonstrate how to control the air pump nozzles through serial communication by sending bytes.
+- [x] **Serial Control Code**: A set of code snippets that demonstrate how to control the air pump nozzles through serial communication by sending bytes.
 
--[x] **Camera Detection**: Code for detecting and interacting with a camera on Jetson NX to capture images or video streams.
+- [x] **Camera Detection**: Code for detecting and interacting with a camera on Jetson NX to capture images or video streams.
 
--[x] **YOLO Inference with TensorRT**: A complete set of scripts for using YOLO (You Only Look Once) with TensorRT to perform real-time object detection on the captured images or video streams.
+- [x] **YOLO Inference with TensorRT**: A complete set of scripts for using YOLO (You Only Look Once) with TensorRT to perform real-time object detection on the captured images or video streams.
 
--[x] **Jetson Xavier NX Guide**: A detailed guide explaining how to deploy the project on Jetson Xavier NX and troubleshoot common errors.
+- [x] **Jetson Xavier NX Guide**: A detailed guide explaining how to deploy the project on Jetson Xavier NX and troubleshoot common errors.
 
--[ ] **Fish Data-Driven Training for New Detect Model**: One of the ongoing developments is the utilization of real-world fish swarm data to train and generate new recognition models. 
+- [ ] **Fish Data-Driven Training for New Detect Model**: One of the ongoing developments is the utilization of real-world fish swarm data to train and generate new recognition models. 
 
--[ ] **Reinforcement Learning for Adaptive Control**: Another aspect under progress is the application of reinforcement learning to achieve adaptive control of the fish swarm. 
+- [ ] **Reinforcement Learning for Adaptive Control**: Another aspect under progress is the application of reinforcement learning to achieve adaptive control of the fish swarm. 
 
 This project serves as a preparatory step for future research in using swarm control techniques for real-world applications, such as controlling swarms of drones or autonomous boats.
 
